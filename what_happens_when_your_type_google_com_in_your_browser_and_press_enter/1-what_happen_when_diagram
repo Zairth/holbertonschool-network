@@ -1,0 +1,29 @@
+[User Browser]
+      |
+      v
+[DNS Resolver]
+      |
+      v
+[Root DNS] -> [TLD DNS] -> [Authoritative DNS]
+      |
+      v
+[IP Address Resolved: 216.58.xxx.xxx]
+      |
+      v
+[Firewall] -- checks and allows traffic
+      |
+      v
+[Load Balancer (HAProxy)]
+      |
+      v
+[Web Server (Nginx)]
+      |
+      v
+[Application Server (Node.js, Python, etc.)]
+      |
+      v
+[Database (MySQL/PostgreSQL)]
+      |
+      ^
+      |
+[Response back to browser via same path]
